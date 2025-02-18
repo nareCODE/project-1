@@ -25,6 +25,7 @@ body::-webkit-scrollbar {
 
 /* Factory reset scrollbar horizontale (facultatif pour personnalisation) */
 body::-webkit-scrollbar-thumb {
+    width: 0;
    /* Styling thumbs si important visible*/
 }
 
@@ -35,7 +36,6 @@ header {
     background-color: #fff;
     position: fixed;
     color: #fff;
-    padding: 15px;
     border-bottom: 1px solid black;
 }
 
@@ -166,7 +166,6 @@ header, .image-box, body, html {
     width: 100%;
     display: inline-block;
     margin-top: 30px;
-    row-gap: 20px;
     text-align: center;
     font-size: 16px;
     color: black;
