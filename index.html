@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu avec Logo et Liens</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <!-- Logo de la marque -->
+            <div class="logo"><a href="#">Agenc<span class="eco"><i>eco</i></span></a></div>
+            <!-- Barre de navigation responsive si sm media size -->
+            <div class="menu" id="menu">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="team.html">Notre equipe</a></li>
+                    <li><a href="nosservices.htlm">Nos services</a></li>
+                    <li><a href="temoignagescycle.html">Témoignages</a></li>
+                    <li><a href="contact.html">Contactez-nous</a></li>
+                    <li><a href="gallery.html">Notre galerie</a></li>
+                </ul>
+            </div>
+            <div class="burger" id="burger"> <!-- Menu responsive pour les sm size medias -->
+                <i class="fas fa-home" style="font-size: 20px; color: #55ea8b;"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Première partie du main comportant le welcome-->
+        <div class="image-box">
+            <button class="gotothetop" style="background-image: url('images/top.png'); width: 50px; height: 50px; border: none; background-size: cover;" onclick="remonterHaut()"></button>
+            <div class="image-box-content">
+                <h1>Bienvenue dans votre</h1>
+                <p>Agence Web écologique</p>
+            </div>
+        </div>
+        <!-- Présentation de l'équipe -->
+        <div class="notre-equipe">
+            <div class="description-equipe">
+                <h2>Notre équipe</h2>
+                <p>Nous sommes heureux de vous présenter nôtre fabuleuse équipe qui fait opérer la magie aux bureaux.<br> Constituée d'expert dans leur domaine, j'ai l'honneur de vous présenter !</p>
+            </div>
+            <div class="equipe">
+                <div class="membre1">
+                    <img src="images/image1test.jpg" alt="Membre de l'équipe">
+                    <h3>Mary Helms<span class="badge1">UI UX Designer</span></h3>
+                    <p>Designer UI UX pour la boîte depuis 2 ans, elle se démarque avec sa créativité et ses talents d'artiste pour vous offrir le meilleur de l'experience utilisateur possible</p>
+                </div>
+                <div class="membre2">
+                    <img src="images/image2test.jpg" alt="Membre de l'équipe">
+                    <h3>Mat Rixer<span class="badge2">Dev Full Stack</span></h3>
+                    <p>Developpeur Full Stack depuis 6 ans, il nous fait part de toute sa connaissance et nous bénis par ses skills en Javascript et ses framework!</p>
+                </div>
+                <div class="membre3">
+                    <img src="images/image3test.jpg" alt="Membre de l'équipe">
+                    <h3>Jack Doe<span class="badge3">Dev OPS</span></h3>
+                    <p>MarketinDeveloppeur Full Stack depuis 6 ans, il nous fait part de toute sa connaissance et nous bénis par ses skills en Javascript et ses framework!</p>
+                </div>
+            </div>
+        </div>
+        <!-- Présentation de stats utiles -->
+        <div class="utiles-stats">
+
+            <div class="utiles-stats-div1">
+
+                <h2>300</h2>
+                <p>Clients Satisfaits</p>
+
+            </div>
+            <div class="utiles-stats-div2">
+
+                <h2>+40000</h2>
+                <p>Heures de programmation</p>
+
+            </div>
+            <div class="utiles-stats-div3">
+
+                <h2>250</h2>
+                <p>Site Web livrés</p>
+
+            </div>
+            <div class="utiles-stats-div4">
+
+                <h2>153</h2>
+                <p>Application React créées</p>
+
+            </div>
+            </div>
+            <!-- Différents logos des services-->
+            <div class="nos-services">
+                <div class="nos-services-title">
+                    <h2>Nos services</h2>
+                </div>
+                <div class="nos-services-services">
+                    <div class="creasiteweb">
+                        <a class="crea" href="nosservices.html">
+                        <img src="images/creasiteweb.jpg" alt="Services de l'entreprise">
+                        </a>
+                        <h2>Création de sites web</h2>
+                    </div>
+                    <div class="auditqualite">
+                        <a href="nosservices.html">
+                        <img src="images/auditqualite.jpg" alt="Services de l'entreprise">
+                        </a>
+                        <h2>Audit qualité</h2>
+                    </div>
+            </div>
+        </div>
+        <!-- Partie du formulaire client-->
+        <div class="formulaire-container">
+    <h2 class="formulaire-title">Contactez-nous</h2>
+    <p class="formulaire-subtitle">Pour toute demande de devis, d'information ou de partenariat<br> Veuillez nous laisser un message et nous ne manquerons pas de vous recontacter !</p>
+    <form class="contact-formulaire">
+      <div class="formulaire-row">
+        <input type="text" name="nom-prenom" placeholder="Nom et Prenom" required>
+        <input type="text" name="categorie" placeholder="Catégorie" required>
+      </div>
+      <div class="formulaire-row">
+        <input type="tel" name="telephone" placeholder="Téléphone" required>
+        <input type="text" name="ville" placeholder="Ville" required>
+      </div>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Message" rows="4" required></textarea>
+      <div class="button-container">
+      <button type="submit" class="submit-button">Envoyer</button>
+      </div>
+    </form>
+  </div>
+  <!-- La section à propos de nous-->
+<div class="apropos-de-nous">
+    <div class="photo-apropos">
+        <img src="images/apropos.jpg" alt="A propos de nous">
+    </div>
+    <div class="card-apropos">
+        <h2>A propos de nous</h2>
+        <p>Agence Web écologique est une entreprise qui se soucie de l'environnement et de la qualité de ses services.
+        <div class="card-apropos-spe">
+            <div class="icon-apropoos1">
+            <img src="images/apropos1.jpg" alt="A propos de nous">
+            <h3>Ecologique</h3>
+            </div>
+        <div class="icon-apropos2">
+            <img src="images/apropos2.jpg" alt="Membre de l'équipe">
+            <h3>Responsable</h3>
+        </div>
+        <div class="icon-apropos3">
+            <img src="images/apropos3.jpg" alt="Membre de l'équipe">
+            <h3>24/7 Assistance</h3>
+        </div>
+    </div>
+</div>
+</div>
+<!-- La section galerie photo-->
+    <div class="notre-galerie">
+        <div class="notre-galerie-title">
+            <h2>Notre galerie</h2>
+        <p>Voici ici plusieurs de nos créations web et applications faites ses 6 derniers mois</p>
+        </div>
+        <div class="notre-galerie-images">
+            <img src="images/apropos.jpg" alt="Photos 1">
+            <img src="images/banner1.jpg" alt="Photos 2">
+            <img src="images/galerie.jpg" alt="Photos 3">
+        </div>
+        <div class="navigation-buttons"> <!-- Une division pour contenir les boutons sous l'image -->
+            <button class="prev-btn">&lt;</button>
+            <button class="next-btn">&gt;</button> 
+        </div>
+</div>
+<!-- La section Pre-footer / Footer -->
+<div class="pre-footer">
+<div class="container">
+    <div class="pre-footer-section">
+      <h3>Content</h3>
+      <a href="aides2.html">page content 1</a>
+      <a href="aides3.html">page content 2</a>
+    </div>
+    <div class="pre-footer-section">
+      <h3>Informations</h3>
+      <a href="aides2.html">page information 1</a>
+      <a href="aides3.html">page information 2</a>
+    </div>
+    <div class="pre-footer-section">
+      <h3>Services</h3>
+      <a href="aides2.html">page services 1</a>
+      <a href="aides3.html">page services 2</a>
+    </div>
+    <div class="pre-footer-section">
+      <h3>Aide</h3>
+      <a href="aides2.html">page aides 1</a>
+      <a href="aides3.html">page aides 2</a>
+    </div>
+    <div class="pre-footer-contact">
+      <div class="contact-item">
+        <span class="icon">📞</span>
+        <p>+33 9 48 94 89 49<br>+33 6 84 97 98 79</p>
+      </div>
+      <div class="contact-item">
+        <span class="icon">📍</span>
+        <p>17630<br> La Flotte<br>France</p>
+      </div>
+    </div>
+</div>
+</div>
+</main>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Section de copyright -->
+        <p class="footer-text">Copyright © 2025 AGENCECO - All rights reserved</p>
+        <!-- Section d'icônes sociales -->
+        <div class="social-icons">
+            <a href="#" class="social-icon">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fa fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+<!-- Javascript nécessaire pour le burger & les bouttons prev et next de la galerie photo-->
+    <script>
+        function remonterHaut() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+        // Selection des éléments HTML à manipuler
+        const burger = document.getElementById('burger');
+        const menu = document.getElementById('menu');
+
+        // Ajoute la possibilité de clicker sur le menu burger 
+        burger.addEventListener('click', function() {
+            // Change les propiétés CSS du menu pour le rendre visible  
+            menu.classList.toggle('active');
+        });
+    </script>
+    <script>
+// Sélectionne toutes les images
+const images = document.querySelectorAll('.notre-galerie-images img'); 
+const prevButton = document.querySelector('.prev-btn'); 
+const nextButton = document.querySelector('.next-btn');
+
+let currentIndex = 0; 
+
+// Fonction pour mettre à jour l'image visible
+function updateImage() {
+    images.forEach((img, index) => {
+        img.classList.remove('active'); 
+        if (index === currentIndex) {
+            img.classList.add('active');
+        }
+    });
+}
+
+// Au clic sur "Précédent"
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+    updateImage(); 
+});
+
+// Au clic sur "Suivant"
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0; 
+    updateImage(); 
+});
+
+// Initialiser la galerie : afficher uniquement la première image
+updateImage();
+</script>
+</body>
+</html>
