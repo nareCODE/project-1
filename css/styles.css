@@ -8,26 +8,26 @@
 /* Set le body sur Poppins en police */
 body {
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden; 
     width: 100%;
     max-width: 100%;
 }
 
 body, html {
-    overflow-y: auto; /* Permettre le défilement vertical */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; 
+    overflow-x: hidden; 
     height: 100%;
     width: 100%;
     max-width: 100%;
 }
 
 
-/* Cache l'apparence de la barre verticale (Chrome, Edge, Safari) */
+
 body::-webkit-scrollbar {
     width: 0; /* Définit la largeur de la barre verticale à 0 */
 }
 
-/* Factory reset scrollbar horizontale (facultatif pour personnalisation) */
+
 body::-webkit-scrollbar-thumb {
     width: 0;
    /* Styling thumbs si important visible*/
@@ -167,7 +167,8 @@ header, .image-box, body, html {
 /* Div entiere equipe */
 .notre-equipe {
     width: 100%;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     margin-top: 30px;
     text-align: center;
     font-size: 16px;
@@ -202,9 +203,9 @@ header, .image-box, body, html {
 
 /* Equipe */
 .equipe {
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: flex-start;
     display: flex;
-    align-items: center;
     font-weight: 600;
     gap: 30px;
 }
@@ -215,12 +216,18 @@ header, .image-box, body, html {
     width: 300px;
     height: 300px;
     margin: 20px;
+    object-fit: cover;
 }
 
 .equipe div { 
     flex: 1;
-    max-width: 500px;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
     text-align: center;
+    gap: 20px;
+    align-items: center;
 }
 
 .equipe p {
@@ -250,11 +257,23 @@ header, .image-box, body, html {
     flex-wrap: wrap;
 }
 
+.utiles-stats div {
+    text-align: center;
+    padding: 20px;
+    flex: 1;
+    min-width: 200px;
+    transition: transform 0.3s;
+}
+
+.utiles-stats div:hover {
+    transform: translateY(-10px);
+}
+
 .utiles-stats div h2 {
     font-size: 4em;
     color: yellow;
     font-weight: bold;
-    }
+}
 
 .utiles-stats div p {
     font-size: 2.2em;
@@ -312,6 +331,7 @@ header, .image-box, body, html {
     font-size: 30px;
 }
 
+/* Partie formulaire et PlaceHolder formulaire */
 .formulaire-container {
     background-color: #204A4C;
   }
@@ -394,20 +414,25 @@ header, .image-box, body, html {
     color: white;
   }
 
-.apropos-de-nous {
-    width: 100%;
+  /* Section A pros de nous */
+
+  .apropos-de-nous {
+    width: 90%;
     display: flex;
-    align-items: stretch;
-    border-radius: 20%;
-    padding: 50px;
+    padding: 30px;
     margin-top: 4vw;
     box-sizing: border-box;
     justify-content: space-between;
-    gap: 20px;
+    gap: 40px;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .photo-apropos {
-    flex: 0 0 50%; /* Limiter la largeur à 40% du conteneur parent */
+    flex: 1;
+    width: 50%;
 }
 
 .photo-apropos img {
@@ -433,24 +458,31 @@ header, .image-box, body, html {
     font-size: 2.5em;
     padding: 20px;
     font-weight: bold;
-    color: #204A4C;
+    color: black;
 }
 
 .card-apropos p {
-    font-size: 1em;
-    padding: 20px;
-    font-weight: bold;
-    color: #333;
+    font-size: 1.2em;
+    padding: 10px;
+    color: #204A4C;
+    font-weight: 400;
     margin-bottom: 20px;
+}
+
+.card-apropos h3 {
+    color: #204A4C;
 }
 
 .card-apropos-spe img {
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    padding: 20px;
-    border: 4px solid #204A4C;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    border: 6px solid #204A4C;
     object-fit: contain;
+    background-color: white;
+    display: block;
+    margin-bottom: 5px;
 }
 
 .card-apropos-spe {
@@ -459,6 +491,12 @@ header, .image-box, body, html {
     justify-content: space-evenly;
     padding: 10px;
 }
+
+.icon-apropos1 img, .icon-apropos2 img, .icon-apropos3 img {
+    padding: 40px;
+}
+
+
 
 .notre-galerie {
     width: 100%;
@@ -631,7 +669,7 @@ header, .image-box, body, html {
 
 /* Footer Styling */
 .footer {
-    background-color: #333;
+    background-color: #0A2A2A;
     color: white;
     padding: 30px;
 }
@@ -661,10 +699,10 @@ header, .image-box, body, html {
     display: flex;
     align-items: center; 
     justify-content: center;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border: 1px solid white;
-    border-radius: 50%;
+    border-radius: 20%;
     color: white;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -675,12 +713,19 @@ header, .image-box, body, html {
     color: #333;
 }
 
+/* Section Media Size et Responsivness */
+/* Section media max width = 768 px */
   @media (max-width: 768px) {
 
     .burger {
-        margin-right: 10px;
         display: flex;
+        cursor: pointer;
+        padding-right: 30px;
+        transition: transform 0.3s ease;
     }
+    .burger:hover {
+    transform: scale(1.1);
+}
     .menu {
         display: none;
     }
@@ -688,7 +733,7 @@ header, .image-box, body, html {
 /* Menu en sm media size !important z-index pour le menu */
     .menu.active {
         z-index: 1000;
-        margin-right: 35px; 
+        margin-right: 15px; 
         display: block;
         position: fixed;
         top: 65px;
@@ -699,7 +744,18 @@ header, .image-box, body, html {
         text-align: right;
         border: 1px solid #204A4C;
         border-radius: 5px;
-        box-shadow: black 1 1 2px;    
+        box-shadow: black 1 1 2px;
+        animation: slideIn 0.2s ease-in-out;    
+    }
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
 
 /* Le menu s'affiche verticalement */
@@ -712,6 +768,10 @@ header, .image-box, body, html {
     .menu.active ul li {
         margin: 15px 0;
         margin-left: 1em;
+    }
+    .menu.active ul li a:hover {
+        border-bottom: 2px solid #003f52;
+        color: #008540;
     }
 
     .description-equipe {
@@ -751,11 +811,17 @@ header, .image-box, body, html {
     }
 
     .utiles-stats {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 50px 20px;
+        background-color: #f5f5f5;
+        margin: 30px 0;
+        flex-wrap: wrap;
     }
     
+
     .utiles-stats div h2 {
         font-size: 2em;
     }
@@ -801,6 +867,7 @@ header, .image-box, body, html {
 
 
 /* Taille réduite de la police pour les TRES TRES PETITS screen */
+/* Section media max width = 420 px */
 @media (max-width: 420px) {
 
     .menu.active ul li {
@@ -828,6 +895,9 @@ header, .image-box, body, html {
         margin-right: 10px;
     }
 }
+/* Taille réduite de la police pour les TRES TRES PETITS screen */
+/* Section media max width = 250 px */
+
 @media (max-width: 250px) {
     .logo {
         font-size: 0.8em;
