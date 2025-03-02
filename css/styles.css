@@ -63,17 +63,17 @@ header, .image-box, body, html {
 .logo {
     font-size: 2em;
     font-weight: bold;
-    color: #204A4C;
+    color: #008540;
 }
 
 .logo a {
     text-decoration: none;
-    color: #333;
+    color: #008540;
     margin: 20px;
 }
 
 .logo span {
-    color: #204A4C;
+    color: #008540;
 }
 
 /* Style du menu */
@@ -160,9 +160,7 @@ header, .image-box, body, html {
 .image-box-content p {
     font-size: 5em;
     font-weight: bold;
-    background: -webkit-linear-gradient(aliceblue, #f5f76f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: yellow;
 }
 
 
@@ -189,7 +187,7 @@ header, .image-box, body, html {
     font-size: 3.5em;
     margin-top: 10px;
     font-weight: bold;
-    color: #204A4C;
+    color: #008540;
 }
 
 /* Phrase de la div equipe */
@@ -240,48 +238,6 @@ header, .image-box, body, html {
     font-size: 2.2em;
 }
 
-/* Style pour le badge 1  */
-.badge1 {
-    position: relative;
-    padding: 2px;
-    left: 10px;
-    bottom: 10px;
-    background-color: #204A4C;
-    color: white;
-    font-size: 12px;
-    padding: 3px 8px;
-    border-radius: 50%;
-    font-weight: bold;
-}
-
-/* Style pour le badge 2  */
-.badge2 {
-    position: relative;
-    padding: 2px;
-    left: 10px;
-    bottom: 10px;
-    background-color: lightseagreen;
-    color: white;
-    font-size: 12px;
-    padding: 3px 8px;
-    border-radius: 50%;
-    font-weight: bold;
-}
-
-/* Style pour le badge 3  */
-.badge3 {
-    position: relative;
-    padding: 2px;
-    left: 10px;
-    bottom: 10px;
-    background-color: lightcoral;
-    color: white;
-    font-size: 12px;
-    padding: 3px 8px;
-    border-radius: 50%;
-    font-weight: bold;
-}
-
 /* Div des stats utiles  */
 .utiles-stats {
     width: 100%;
@@ -289,18 +245,19 @@ header, .image-box, body, html {
     justify-content: space-evenly;
     background-color: #204A4C;
     color: aliceblue;
+    padding: 50px;
     text-align: center;
     flex-wrap: wrap;
 }
 
 .utiles-stats div h2 {
     font-size: 4em;
+    color: yellow;
     font-weight: bold;
-    text-shadow: 1px 0px 0px black;
     }
 
 .utiles-stats div p {
-    font-size: 2.5em;
+    font-size: 2.2em;
     font-weight: bold;
     padding: 5px;
     margin-bottom: 10px;
@@ -322,7 +279,7 @@ header, .image-box, body, html {
     font-size: 2.2em;
     margin-top: 40px;
     font-weight: bold;
-    color: #204A4C;
+    color: #008540;
 }
 
 /* Style de la div services */
@@ -334,6 +291,17 @@ header, .image-box, body, html {
     gap: 20px;
     padding: 20px;
 }
+.creasiteweb-image, .audit-image {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    padding: 30px;
+    background-color: #F5F5F5;
+}
 
 .nos-services-services h2 {
     padding: 20px;
@@ -341,6 +309,7 @@ header, .image-box, body, html {
     font-weight: 600;
     font-style: italic;
     color: #333;
+    font-size: 30px;
 }
 
 .formulaire-container {
@@ -353,10 +322,9 @@ header, .image-box, body, html {
     margin-top: 20px;
     font-size: 3em;
     font-weight: bold;
-    color: aliceblue;
+    color: yellow;
     margin-bottom: 10px;
     margin-top: 30px;
-    text-shadow: 1px 0px 0px #333;
   }
 
   .formulaire-subtitle {
@@ -443,7 +411,7 @@ header, .image-box, body, html {
 }
 
 .photo-apropos img {
-    border-radius: 2%;
+    border-radius: 5%;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -457,8 +425,7 @@ header, .image-box, body, html {
     margin-left: 20px;
     text-align: center;
     border: 2px solid #204A4C;
-    border-radius: 2%;
-    box-sizing: border-box;
+    border-radius: 5%;
     justify-content: space-evenly;
 }
 
@@ -483,13 +450,14 @@ header, .image-box, body, html {
     height: 50px;
     padding: 20px;
     border: 4px solid #204A4C;
+    object-fit: contain;
 }
 
 .card-apropos-spe {
 
     display: flex;
     justify-content: space-evenly;
-    padding: 30px;
+    padding: 10px;
 }
 
 .notre-galerie {
@@ -504,7 +472,7 @@ header, .image-box, body, html {
     font-size: 3em;
     margin-top: 40px;
     font-weight: bold;
-    color: #204A4C;
+    color: #008540;
 }
 
 .notre-galerie-title p {
