@@ -453,10 +453,10 @@ header, .image-box, body, html {
 }
 
 .photo-apropos img {
-    border-radius: 5%;
-    height: 100%;
-    width: 100%;
+    width: 100%; /* S'adapte dynamiquement à son parent */
+    height: auto; /* Conserve les proportions de l'image */
     object-fit: cover;
+    border-radius: 5%;
 }
 
 .card-apropos {
@@ -492,7 +492,7 @@ header, .image-box, body, html {
 
 .card-apropos-spe img {
     border-radius: 50%;
-    width: auto;
+    width: 100%;
     height: auto;
     padding: 5px;
     border: 6px solid #204A4C;
@@ -761,7 +761,7 @@ header, .image-box, body, html {
         text-align: right;
         border: 1px solid #204A4C;
         border-radius: 5px;
-        box-shadow: black 1 1 2px;
+        box-shadow: black 1px 1px 2px;
         animation: slideIn 0.2s ease-in-out;    
     }
     @keyframes slideIn {
@@ -833,11 +833,10 @@ header, .image-box, body, html {
         justify-content: space-around;
         align-items: center;
         padding: 50px 20px;
-        background-color: #f5f5f5;
+        background-color: #204A4C;
         margin: 30px 0;
         flex-wrap: wrap;
     }
-    
 
     .utiles-stats div h2 {
         font-size: 2em;
@@ -885,7 +884,7 @@ header, .image-box, body, html {
 
 /* Taille réduite de la police pour les TRES TRES PETITS screen */
 /* Section media max width = 420 px */
-@media (max-width: 420px) {
+@media (max-width: 500px) {
 
     .menu.active ul li {
         font-size: 0.9em;
@@ -898,24 +897,44 @@ header, .image-box, body, html {
     .image-box-content p {
         font-size: 2em; 
     }
-}
-
-@media (max-width: 280px) {
-    .menu.active {
-        right: 5px;
-        top: 50px;
-        min-width: 120px;
+    .equipe img {
+        max-width: 150px;
+        height: auto;
+      }
+      .description-equipe {
+        width: 60%;
+    }
+    .equipe {
+        max-width: 80%;
+        gap: 10px;
+      }
+      .utiles-stats {
+        width: 100%;
+        display: flex;
+        padding: 30px 10px;
+        margin: 20px 0;
+        flex-wrap: wrap;
     }
 
-    .burger i {
-        font-size: 16px;
-        margin-right: 10px;
+    .card-apropos-spe {
+        flex-wrap: wrap; /* Ajuste pour les petits écrans */
+        gap: 10px; /* Ajoute de l'espace entre chaque icône */
+        justify-content: center; /* Centre les icônes */
     }
 }
+@media (max-width: 1200px) {
+    .apropos-de-nous {
+        display: inline-block;
+        box-sizing: border-box;
+    }
+}
+
+
+
 /* Taille réduite de la police pour les TRES TRES PETITS screen */
-/* Section media max width = 250 px */
+/* Section media max width = 320 px */
 
-@media (max-width: 250px) {
+@media (max-width: 320px) {
     .logo {
         font-size: 0.8em;
         margin-right: 40px;
@@ -951,4 +970,23 @@ header, .image-box, body, html {
         font-size: 0.7em;
         padding: 5px 10px;
     }
+    .equipe img {
+        max-width: 100px;
+        height: auto;
+      }
+      .description-equipe {
+        width: 50%;
+    }
+    .equipe {
+        max-width: 70%;
+        gap: 5px;
+      }
+      .utiles-stats {
+        width: 100%;
+        display: flex;
+        padding: 20px 5px;
+        margin: 15px 0;
+        flex-wrap: wrap;
+    }
+
 }
