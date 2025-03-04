@@ -163,6 +163,14 @@ header, .image-box, body, html {
     color: yellow;
 }
 
+.panoramic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
 /* Div entiere equipe */
 .notre-equipe {
