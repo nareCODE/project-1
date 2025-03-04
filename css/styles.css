@@ -879,6 +879,9 @@ header, .image-box, body, html {
         width: fit-content;
         margin-inline-start: auto;
     }
+    .icon-apropos1 img, .icon-apropos2 img, .icon-apropos3 img {
+        padding: 25px;
+    }
   }
 
 
@@ -920,6 +923,9 @@ header, .image-box, body, html {
         flex-wrap: wrap; /* Ajuste pour les petits écrans */
         gap: 10px; /* Ajoute de l'espace entre chaque icône */
         justify-content: center; /* Centre les icônes */
+    }
+    .icon-apropos1 img, .icon-apropos2 img, .icon-apropos3 img {
+        padding: 15px;
     }
 }
 @media (max-width: 1200px) {
@@ -987,6 +993,9 @@ header, .image-box, body, html {
         padding: 20px 5px;
         margin: 15px 0;
         flex-wrap: wrap;
+    }
+    .icon-apropos1 img, .icon-apropos2 img, .icon-apropos3 img {
+        padding: 10px;
     }
 
 }
